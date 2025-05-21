@@ -67,3 +67,26 @@
     'orderurl' => 'https://qcgateway.zalopay.vn/openinapp?order=eyJ6cHRyYW5zdG9rZW4iOiJBQ3YzOUFpRHBrRFhqSnZ1dHJsNHBkNFEiLCJhcHBpZCI6MjU1NH0=',
   ),
 ) [] []
+[2025-05-21T10:28:40.175437+00:00] main.DEBUG: array (
+  'request' => 
+  array (
+    'appid' => '2554',
+    'apptime' => 1747823319000,
+    'apptransid' => '250521_000000014',
+    'appuser' => 'magento2',
+    'item' => '[{"itemid":"Laptop Acer Aspire Go AG15-31P-32U6","itemname":"Laptop Acer Aspire Go AG15-31P-32U6","itemprice":11799000,"itemquantity":"1.0000"}]',
+    'embeddata' => '{"merchantinfo":"boolfly"}',
+    'amount' => 11799005,
+    'description' => 'ZaloPay Integration for Magento 2',
+    'bankcode' => 'zalopayapp',
+    'mac' => '93c30c07950c0f4937cb5cd7111db2dc5b565fbe6af5238c90e839a9e12ee2c6',
+  ),
+  'request_uri' => 'https://sandbox.zalopay.com.vn/v001/tpe/createorder',
+  'response' => 
+  array (
+    'returncode' => 1,
+    'returnmessage' => '',
+    'zptranstoken' => 'ACWofbB2-UXFckNpBnGyQZYg',
+    'orderurl' => 'https://qcgateway.zalopay.vn/openinapp?order=eyJ6cHRyYW5zdG9rZW4iOiJBQ1dvZmJCMi1VWEZja05wQm5HeVFaWWciLCJhcHBpZCI6MjU1NH0=',
+  ),
+) [] []

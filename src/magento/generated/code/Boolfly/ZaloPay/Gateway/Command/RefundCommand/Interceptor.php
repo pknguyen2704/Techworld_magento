@@ -17,6 +17,15 @@ class Interceptor extends \Boolfly\ZaloPay\Gateway\Command\RefundCommand impleme
     /**
      * {@inheritdoc}
      */
+    public function execute(array $commandSubject)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
+        return $pluginInfo ? $this->___callPlugins('execute', func_get_args(), $pluginInfo) : parent::execute($commandSubject);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function buildRequestData(array $commandSubject)
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'buildRequestData');
