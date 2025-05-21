@@ -22,22 +22,4 @@ class Interceptor extends \Magento\User\Model\Notificator implements \Magento\Fr
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'sendForgotPassword');
         $pluginInfo ? $this->___callPlugins('sendForgotPassword', func_get_args(), $pluginInfo) : parent::sendForgotPassword($user);
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function sendCreated(\Magento\User\Api\Data\UserInterface $user) : void
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'sendCreated');
-        $pluginInfo ? $this->___callPlugins('sendCreated', func_get_args(), $pluginInfo) : parent::sendCreated($user);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function sendUpdated(\Magento\User\Api\Data\UserInterface $user, array $changed) : void
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'sendUpdated');
-        $pluginInfo ? $this->___callPlugins('sendUpdated', func_get_args(), $pluginInfo) : parent::sendUpdated($user, $changed);
-    }
 }

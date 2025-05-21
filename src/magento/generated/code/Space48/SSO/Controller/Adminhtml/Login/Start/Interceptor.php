@@ -22,22 +22,4 @@ class Interceptor extends \Space48\SSO\Controller\Adminhtml\Login\Start implemen
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'execute');
         return $pluginInfo ? $this->___callPlugins('execute', func_get_args(), $pluginInfo) : parent::execute();
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function validateForCsrf(\Magento\Framework\App\RequestInterface $request) : ?bool
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'validateForCsrf');
-        return $pluginInfo ? $this->___callPlugins('validateForCsrf', func_get_args(), $pluginInfo) : parent::validateForCsrf($request);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function createCsrfValidationException(\Magento\Framework\App\RequestInterface $request) : ?\Magento\Framework\App\Request\InvalidRequestException
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'createCsrfValidationException');
-        return $pluginInfo ? $this->___callPlugins('createCsrfValidationException', func_get_args(), $pluginInfo) : parent::createCsrfValidationException($request);
-    }
 }
